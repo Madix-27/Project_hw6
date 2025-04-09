@@ -3,5 +3,67 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    color: #212121;
 }
 
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: #2996F3;
+    text-decoration: none;
+    padding: 17px;
+    min-width: 200px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header {
+    padding: 25px 0;
+    font-weight: 500;
+    border-bottom: 1px solid #ececec;
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {
+    margin-right: 90px;
+}
+
+.header_nav,.header_info {
+    display: flex;
+    gap: 50px;
+}
+
+.header_nav a {
+    text-decoration: none;
+    color: #212121;
+}
+
+.header_info {
+    margin-left: auto;
+}
+
+.header_info a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.header_info a:hover, .header_nav a:hover {
+    color: #2996F3;
+}
+
+.header_nav a.active {
+    color: #2996F3;
+}
