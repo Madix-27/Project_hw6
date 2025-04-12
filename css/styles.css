@@ -200,3 +200,68 @@ body {
     color: #2996F3;
 }
 
+.button {
+    display: flex;
+    gap: 8px;
+    margin-top: 98px;
+    justify-content: center;
+}
+
+.btn_2 {
+    color: #212121;
+    background: #F5F4FA;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 6px 25px;
+    min-width: 78px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.btn_2:hover {
+    background: #2996F3;
+    color: #F5F4FA;
+}
+
+.btn_2 a:active {
+    background: #2996F3;
+    color: #F5F4FA;
+}
+
+.cards_portfolio {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.cards_portfolio div {
+    max-width: 370px;
+    max-height: 404px;
+    /*border: solid 1px;*/
+}
+
+.text_portfolio_1 {
+    text-align: left;
+    margin: 20px 0 0 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    color: #212121;
+    letter-spacing: 6px;
+    overflow: hidden;
+}
+
+.text_portfolio_2 {
+    text-align: left;
+    margin: 5px 0 20px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #757575;
+    letter-spacing: 3px;
+}
