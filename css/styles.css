@@ -237,12 +237,13 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: space-between;
+    margin-bottom: 95px;
 }
 
 .cards_portfolio div {
     max-width: 370px;
     max-height: 404px;
-    /*border: solid 1px;*/
+    border: solid 1px;
 }
 
 .text_portfolio_1 {
@@ -252,8 +253,8 @@ body {
     font-size: 18px;
     line-height: 36px;
     color: #212121;
-    letter-spacing: 6px;
-    overflow: hidden;
+    letter-spacing: 3px;
+    overflow-y: hidden;
 }
 
 .text_portfolio_2 {
