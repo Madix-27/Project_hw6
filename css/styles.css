@@ -126,7 +126,7 @@ body {
 	font-size: 36px;
 	text-align: center;
 	margin-bottom: 50px;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
 .do_card {
@@ -148,27 +148,34 @@ body {
 .people {
     overflow: hidden;
     background: #fff;
-    min-width: 270px;
-    min-height: 368px;
+    flex: 1 1 25%;
+}
 
+.people img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
 }
 
 .team_name {
+    padding: 24px;
+}
+
+.team_name h3 {
     text-align: center;
-    margin-top: 30px;
     font-weight: 500;
     font-size: 16px;
     color: #212121;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 }
 
-.team_qu {
+.team_name p {
     text-align: center;
-    margin: 10px 0 30px 0;
     font-weight: 400;
     font-size: 16px;
     color: #757575;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
 }
 
 .footer {
@@ -176,14 +183,21 @@ body {
 	color: #fff;
     max-height: 252px;
     padding: 60px 0;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.footer a{
+    display: inline-block;
 }
 
 .adress {
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    max-width: 231px;
+    flex-direction: column;
+    margin: 10px 0 0;
+    display: flex;
+    align-items: flex-start;
 }
 
 .adress a {
@@ -212,13 +226,13 @@ body {
     background: #F5F4FA;
     font-size: 16px;
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     text-decoration: none;
     padding: 6px 25px;
-    min-width: 78px;
     cursor: pointer;
     text-align: center;
     border-radius: 3px;
+    display: block;
 }
 
 .btn_2:hover {
@@ -226,7 +240,7 @@ body {
     color: #F5F4FA;
 }
 
-.btn_2 a:active {
+.btn_2.active {
     background: #2996F3;
     color: #F5F4FA;
 }
@@ -236,33 +250,44 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    justify-content: space-between;
     margin-bottom: 95px;
 }
 
 .cards_portfolio div {
-    max-width: 370px;
-    max-height: 404px;
+    flex: 1 1 30%;
     border: solid 1px;
 }
 
-.text_portfolio_1 {
-    text-align: left;
-    margin: 20px 0 0 20px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 36px;
-    color: #212121;
-    letter-spacing: 3px;
-    overflow-y: hidden;
+.cards_portfolio div>div {
+    border: none;
 }
 
-.text_portfolio_2 {
+.cards_portfolio img {
+    width: 100%;
+    height: 294px;
+    object-fit: cover;
+}
+
+.text_portfolio h3 {
     text-align: left;
-    margin: 5px 0 20px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #212121;
+    letter-spacing: 1px;
+    line-height: 36px;
+}
+
+.text_portfolio p {
+    text-align: left;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
     color: #757575;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+}
+
+.text_portfolio {
+    border: none;
+    padding: 24px;
 }
