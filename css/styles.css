@@ -145,15 +145,28 @@ body {
 }
 
 .hero {
+    position: relative;
     min-height: 600px;
-	background: #2F303A;
+	background: #2F303A url('../images/backgroundfoto.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 	color: #fff;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 }
 
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(47, 48, 58, 0.5);
+}
+
 .hero_box {
+    position: relative;
+    z-index: 1;
     text-align: center;
     max-width: 700px;
     margin: 0 auto;
@@ -172,6 +185,70 @@ body {
 	padding: 94px 0;
 }
 
+.antena {
+    padding-top: 150px;
+    position: relative;
+}
+
+.clock {
+    padding-top: 150px;
+    position: relative;
+}
+
+.diagram {
+    padding-top: 150px;
+    position: relative;
+}
+
+.astronaut {
+    padding-top: 150px;
+    position: relative;
+}
+
+.clock::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: #F5F4FA url(../images/clock\ 1.svg) no-repeat 50%/70px;
+    border-radius: 4px;
+}
+
+.diagram::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: #F5F4FA url(../images/diagram\ 1.svg) no-repeat 50%/70px;
+    border-radius: 4px;
+}
+
+.astronaut::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: #F5F4FA url(../images/astronaut\ 1.svg) no-repeat 50%/70px;
+    border-radius: 4px;
+}
+
+.antena::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: #F5F4FA url(../images/antenna\ 1.svg) no-repeat 50%/70px;
+    border-radius: 4px;
+}
+
 .about_cards {
 	display: flex;
 	gap: 30px;
@@ -185,6 +262,50 @@ body {
 
 .about_card p {
 	color: #757575;
+	line-height: 29px;
+}
+
+.antena h2 {
+    margin-bottom: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.clock h2 {
+    margin-bottom: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.diagram h2 {
+    margin-bottom: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.astronaut h2 {
+    margin-bottom: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.antena p {
+    color: #757575;
+	line-height: 29px;
+}
+
+.clock p {
+    color: #757575;
+	line-height: 29px;
+}
+
+.diagram p {
+    color: #757575;
+	line-height: 29px;
+}
+
+.astronaut p {
+    color: #757575;
 	line-height: 29px;
 }
 
