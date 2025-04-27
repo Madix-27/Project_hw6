@@ -215,7 +215,7 @@ body {
     left: 0;
     right: 0;
     height: 120px;
-    background: #F5F4FA url(../images/clock\ 1.svg) no-repeat 50%/70px;
+    background: #F5F4FA url(../images/clock1.svg) no-repeat 50%/70px;
     border-radius: 4px;
 }
 
@@ -226,7 +226,7 @@ body {
     left: 0;
     right: 0;
     height: 120px;
-    background: #F5F4FA url(../images/diagram\ 1.svg) no-repeat 50%/70px;
+    background: #F5F4FA url(../images/diagram1.svg) no-repeat 50%/70px;
     border-radius: 4px;
 }
 
@@ -237,7 +237,7 @@ body {
     left: 0;
     right: 0;
     height: 120px;
-    background: #F5F4FA url(../images/astronaut\ 1.svg) no-repeat 50%/70px;
+    background: #F5F4FA url(../images/astronaut1.svg) no-repeat 50%/70px;
     border-radius: 4px;
 }
 
@@ -248,7 +248,7 @@ body {
     left: 0;
     right: 0;
     height: 120px;
-    background: #F5F4FA url(../images/antenna\ 1.svg) no-repeat 50%/70px;
+    background: #F5F4FA url(../images/antenna1.svg) no-repeat 50%/70px;
     border-radius: 4px;
 }
 
@@ -372,6 +372,8 @@ body {
     overflow: hidden;
     background: #fff;
     flex: 1 1 25%;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.2);
 }
 
 .people img {
@@ -417,17 +419,31 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    background-size: 20px;
+    /*background-size: 20px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
+    fill: #AFB1B8;
+    transition: fill 0.3s ease;
+}
+
+.icon a svg {
+    height: 20px;
+    width: 20px;
 }
 
 .icon:hover a {
     background-color: #2996F3;
+    fill: #fff;
 }
 
-.icon:nth-child(1) a {
+
+
+
+/*.icon:nth-child(1) a {
     background-image: url(../images/instagram1.svg);
 }
 
@@ -442,6 +458,10 @@ body {
 .icon:nth-child(4) a {
     background-image: url(../images/linkedin1.svg);
 }
+
+
+
+
 
 /*.icon:hover a {
     border-radius: 50%;
@@ -487,6 +507,53 @@ body {
     border-radius: 50%;
     background-color: #2196f3;
 }*/
+
+.customers {
+    padding: 94px 0;
+}
+
+.h_customers {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.customers_cards {
+    display: flex;
+    gap: 30px;
+}
+
+.customers_cards li {
+    flex: 1 1 16%;
+    height: 92px;
+    border: #AFB1B8 solid 1px;
+    transition: border-color 0.3s ease;
+}
+
+.customers_cards li:hover {
+    border-color: #2996F3;
+}
+
+.customers_cards li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customers_cards svg {
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;
+    transition: fill 0.3s ease;
+}
+
+.customers_cards li:hover a svg {
+    fill: #2996F3;
+}
 
 .footer {
 	background: #2F303A;
@@ -539,7 +606,7 @@ body {
 }
 
 .footer_icon_section {
-    margin: 20px 70px;
+    margin: 20px 0 0;
 }
 
 .title_icon {
@@ -562,27 +629,35 @@ body {
     width: 44px;
     height: 44px;
     position: relative;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: fill 0.3s ease;
 }
-
-/*.adress, .footer_icon_section {
-    width: 45%;
-}*/
 
 .footer_icon a {
     display: block;
     width: 100%;
     height: 100%;
-    background-size: 20px;
+    /*background-size: 20px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
     border-radius: 50%;
+    fill: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_icon a svg {
+    height: 20px;
+    width: 20px;
 }
 
 .footer_icon:hover a {
     background-color: #2996F3;
 }
 
-.footer_icon:nth-child(1) a {
+/*.footer_icon:nth-child(1) a {
     background-image: url(../images/instagram1.svg);
 }
 
@@ -596,6 +671,11 @@ body {
 
 .footer_icon:nth-child(4) a {
     background-image: url(../images/linkedin1.svg);
+}*/
+
+.footer_container {
+    display: flex;
+    gap: 70px;
 }
 
 .button {
@@ -680,6 +760,7 @@ body {
     line-height: 28px;
     letter-spacing: 1px;
     padding: 24px;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.4);
 }
 
 .text_portfolio h3 {
@@ -748,4 +829,12 @@ body {
 
 .aside:hover {
     display: block;
+}
+
+.icon_hidden {
+    position: absolute;
+    z-index: -10;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
