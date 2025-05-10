@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -139,7 +139,9 @@ body {
     text-decoration: none;
 }
 
-.header_info a:hover, .header_nav a:hover, .list_menu_2 a:hover {
+.header_info a:hover, 
+.header_nav a:hover, 
+.list_menu_2 a:hover {
     color: #2996F3;
 }
 
@@ -255,6 +257,11 @@ body {
 .about_cards {
 	display: flex;
 	gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about_card {
+    flex: 1 1 22%;
 }
 
 .about_card h2 {
@@ -318,7 +325,9 @@ body {
 
 .do_cards {
 	display: flex;
-	gap: 30px;
+	/*gap: 30px;*/
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .do_title {
@@ -330,8 +339,13 @@ body {
 }
 
 .do_card {
-	height: 294px;
-	overflow: hidden;
+    flex: 0 1 33.33%;
+    padding: 0 15px;
+}
+
+.do_card > div {
+    height: 294px;
+    overflow: hidden;
     position: relative;
 }
 
@@ -371,7 +385,7 @@ body {
 .people {
     overflow: hidden;
     background: #fff;
-    flex: 1 1 25%;
+    flex: 1 1 20%;
     border-radius: 0 0 4px 4px;
     box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.2);
 }
@@ -522,10 +536,11 @@ body {
 .customers_cards {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .customers_cards li {
-    flex: 1 1 16%;
+    flex: 1 1 13%;
     height: 92px;
     border: #AFB1B8 solid 1px;
     transition: border-color 0.3s ease;
@@ -720,6 +735,7 @@ body {
 .cards_portfolio div {
     flex: 1 1 30%;
     border: solid 1px;
+    flex-wrap: wrap;
 }
 
 .cards_portfolio div>div {
@@ -735,6 +751,7 @@ body {
 
 .relative {
     position: relative;
+    flex-wrap: wrap;
 }
 
 .cards_portfolio img {
@@ -813,6 +830,39 @@ body {
     margin-top: -2px;
 }
 
+.burger_last {
+    width: 34px;
+    height: 20px;
+    position: absolute;
+    top: 24px;
+    right: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.burger_last::before,
+.burger_last::after,
+.burger_last span {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: grey;
+    z-index: 1;
+}
+
+.burger_last::after {
+    top: auto;
+    bottom: 0;
+}
+
+.burger_last span {
+    top: 50%;
+    margin-top: -2px;
+}
+
 .aside {
     background: lightgray;
     position: fixed;
@@ -837,4 +887,172 @@ body {
     width: 0;
     height: 0;
     opacity: 0;
+}
+
+
+/*1300px*/
+
+@media screen and (max-width: 1300px) {
+
+    .header_logo {
+        margin-left: 60px;
+    }
+
+    .customers_cards li {
+        flex: 1 1 14%;
+    }
+}
+
+/*1000px*/
+
+@media screen and (max-width: 1000px) {
+    
+    .header_logo {
+        margin-right: 30px;
+    }
+
+    .header_nav, 
+    .header_info {
+        gap: 20px;
+    }
+
+    .about_card {
+        flex: 1 1 47%;
+    }
+
+    .do_cards {
+        row-gap: 30px;
+    }
+
+    .do_card {
+        flex-basis: 50%;
+    }
+
+    .people {
+        flex: 1 1 47%;
+    }
+
+    .customers_cards li {
+        flex: 1 1 10%;
+    }
+
+    .button {
+        margin-top: 60px;
+    }
+
+    .cards_portfolio {
+        gap: 15px;
+    }
+}
+
+/*768px*/
+
+@media screen and (max-width: 768px) {
+    
+    .do_card {
+        flex-basis: 100%;
+    }
+
+    .do_card > div {
+        height: 350px;
+    }
+
+    .customers_cards li {
+        flex: 1 1 29%;
+    }
+
+    .button {
+        flex-wrap: wrap;
+        flex: start;
+    }
+
+    .btn_2 {
+        flex: 0 1 30%;
+        min-width: 121px;
+    }
+
+    .cards_portfolio div {
+        flex: 1 1 45%;
+    }
+
+    .cards_portfolio div:nth-child(9) {
+        flex: 0 1 49%;
+    }
+}
+
+/*640*/
+
+@media screen and (max-width: 640px) {
+
+    .header_logo {
+        margin: 0;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .burger_last {
+        display: block;
+    }
+    
+    .header_nav, 
+    .header_info {
+        display: none;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero_title {
+        font-size: 26px;
+        line-height: 42px;
+    }
+
+    .about_card {
+        flex: 1 1 100%;
+    }
+
+    .do {
+        display: none;
+    }
+
+    .people {
+        flex: 1 1 100%;
+        width: 450px;
+    }
+
+    .people img {
+        height: 460px;
+    }
+
+    .customers {
+        display: none;
+    }
+
+    .footer {
+        max-height: 610px;
+    }
+
+    .footer_container {
+        flex-wrap: wrap;
+    }
+
+    .adress {
+        flex: 1 1 100%;
+        align-items: center;
+    }
+
+    .footer_icon_section {
+        margin: 0 auto;
+    }
+
+    .cards_portfolio div {
+        flex: 1 1 90%;
+    }
+
+    .cards_portfolio div:nth-child(9) {
+        flex: 1 1 90%;
+    }
 }
